@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "quiz-app": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  }
+}

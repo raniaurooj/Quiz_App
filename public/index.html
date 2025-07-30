@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Quiz App</title>
+</head>
+<body class="min-h-screen">
+    <div class="Container">
+         <div class="name">
+                <i class="fa-solid fa-circle-question"></i>
+                <h1>Quiz</h1>
+        </div>
+        <hr>
+        <form>
+            <div class="category_dropdown">
+                <p>Select categery</p>
+                <select name="category" id="">
+                    <!-- options will append in JS -->
+                </select>
+            </div>
+            <div class="difficulty_dropdown">
+                <p>Difficulty</p>
+                <select name="difficulty" id="">
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="select_type">
+                <p>Type</p>
+                <select name="type" id="">
+                    <option value="multiple" selected>Multiple Choice</option>
+                    <option value="boolean">True / False</option>
+                </select>
+            </div>
+             <div class="number">
+                <p>No. of Questions</p>
+                <input type="number" id="amount" value="5" min="1" max="50">
+            </div>
+            <button id="start_btn">Start Quiz</button>
+        </form>
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container hidden">
+        <p class="question"></p>
+        <hr>
+        <div class="options">
+            <!-- options will append in JS -->
+        </div>
+        <p class="msg"></p>
+        <button id="submit-btn">Submit</button>
+        <button id="next-btn" disabled>Next</button>
+    </div>
+
+    <!-- show results at last -->
+    <div class="result-container hidden">
+        <h1>Quiz Completed!</h1>
+        <p>You scored</p>
+        <p class="result"></p>
+        <button id="reset-btn">Try Again</button>
+    </div>
+
+    <script src="../src/categories.js"></script>
+    <script src="../src/script.js"></script>
+</body>
+</html>

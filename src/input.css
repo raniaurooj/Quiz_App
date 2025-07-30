@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h1{
+        @apply bg-gradient-to-r from-rose-700 to-fuchsia-800 bg-clip-text text-transparent
+         font-bold text-[6vmin];
+    }
+    body{
+        @apply bg-[url('https://th.bing.com/th/id/R.310a645cf6e69a7a12d654bebff5ed40?rik=5yJW1bi%2fx8fjaQ&pid=ImgRaw&r=0')]
+         bg-cover flex justify-center items-center text-fuchsia-900;
+    }
+    button{
+        @apply rounded-md bg-fuchsia-900 border-[1px] p-2 font-bold text-white shadow-md shadow-gray-300 my-2;
+    }
+    .name{
+        @apply h-[30vmin] flex flex-col justify-center items-center
+        gap-[0.5rem] text-violet-950 font-bold text-[6vmin] 
+        bg-gradient-to-r from-rose-800 to-fuchsia-900 bg-clip-text text-transparent;
+    }
+    hr{
+        @apply mb-1 border-[0.02] border-fuchsia-700;
+    }
+    .Container{
+        @apply w-[60vw] h-[80vh] sm:w-[85vmin] sm:h-[90vmin] shadow-lg shadow-indigo-950 
+        bg-white p-2 rounded-lg;
+    }
+    form{
+        @apply my-2 p-2 text-sm flex flex-col gap-2;
+    }
+    form select, #amount{
+        @apply w-[100%] outline-none rounded-md p-2 shadow-md border-[1px] ;
+    }
+    #start-btn{
+        @apply w-[100%];
+    }
+    .quiz-container{
+        @apply p-[10px] w-[60vw] h-[50vh] bg-white shadow-lg rounded-lg;
+    }
+    .options{
+        @apply p-2 m-[10px] shadow-md border-[1px];
+    }
+    .question{
+        @apply mt-2 p-2 font-bold;
+    }
+    .msg{
+        @apply font-semibold;
+    }
+    #submit-btn, #next-btn{
+        @apply w-[100px] ;
+    }
+    #next-btn:disabled,#submit-btn:disabled{
+        @apply bg-fuchsia-900/70;
+    }  
+    .result-container{
+        @apply p-[10px] w-[50vw] h-[50vh] bg-white shadow-lg rounded-lg flex flex-col justify-center
+        items-center gap-2 ;
+    } 
+    .result-container p{
+        @apply font-bold text-xl;
+    }
+    #reset-btn{
+        @apply w-[150px];
+    }
+}
